@@ -1,0 +1,2 @@
+class KitchenLedgerError(Exception):
+    pass

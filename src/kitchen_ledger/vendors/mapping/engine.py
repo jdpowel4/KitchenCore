@@ -1,0 +1,43 @@
+from sqlalchemy.orm import Session
+
+from kitchen_ledger.vendors.models import VendorItem
+from kitchen_ledger.vendors.mapping.matcher import MapperMatcher
+from kitchen_ledger.vendors.mapping.interactive import InteractiveMapper
+from kitchen_ledger.vendors.mapping.dto import MatchResult
+#from kitchen_ledger.ingredients.interfaces.create import IngredientInterface
+'''
+def map(
+        session: Session,
+        item: VendorItem
+) -> VendorItem:
+    
+    interactive = InteractiveMapper()
+    interactive.head(item)
+
+    matches = MapperMatcher.find(session, item.vendor_description)
+
+    if not matches:
+        print("No Possible Matches Found!")
+   
+
+    selection = interactive.choose_ingredients(matches)
+    
+    #ingredient_interface = IngredientInterface()
+
+    if isinstance(selection, MatchResult):
+        item.ingredient = selection.ingredient
+        return item
+
+    elif selection == "create":        
+        ingredient = ingredient_interface.create_from_vend_item(session, item)
+        item.ingredient = ingredient
+        return item
+    
+    elif selection == "hint":
+        ingredient = ingredient_interface.hint(session)
+        item.ingredient = ingredient
+        return item
+
+    else:
+        raise
+'''
